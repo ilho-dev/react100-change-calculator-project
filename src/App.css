@@ -1,1 +1,64 @@
-/* Add your custom css here */
+.app-shell {
+  min-height: 100vh;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+body {
+  background:
+    radial-gradient(circle at 10% 10%, rgba(13, 110, 253, 0.12), transparent 45%),
+    radial-gradient(circle at 90% 15%, rgba(25, 135, 84, 0.1), transparent 40%),
+    linear-gradient(180deg, #f8fbff 0%, #f4f7fb 100%);
+}
+
+.panel-modern,
+.denom-card {
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+}
+
+.panel-modern .card-body {
+  padding: 1.25rem;
+}
+
+.panel-modern .form-control {
+  border-radius: 12px;
+  border-color: rgba(15, 23, 42, 0.12);
+  padding: 0.7rem 0.85rem;
+}
+
+.panel-modern .btn {
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+.denom-card {
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease,
+    border-color 160ms ease;
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.denom-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.1);
+  border-color: rgba(13, 110, 253, 0.16);
+}
+
+.denom-card .card-body {
+  padding: 1rem 0.75rem;
+}
+
+.denom-value {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1;
+  color: #0f172a;
+}
+
+.alert {
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.05);
+}

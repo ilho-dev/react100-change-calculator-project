@@ -89,9 +89,12 @@ function App() {
   ]
 
   return (
-    <div className="container py-4">
+    <div className="container py-4 app-shell">
       <header className="mb-4">
-        <h1 className="mb-1">Change Calculator</h1>
+        <h1 className="mb-1 d-flex align-items-center gap-2">
+          <i className="bi bi-calculator" aria-hidden="true"></i>
+          <span>Change Calculator</span>
+        </h1>
         <p className="text-muted mb-0">
           Enter the amount due and amount received to calculate change.
         </p>
@@ -99,11 +102,12 @@ function App() {
 
       <div className="row g-4">
         <div className="col-md-4">
-          <div className="card">
+          <div className="card panel-modern">
             <div className="card-body">
               <div className="mb-3">
                 <label htmlFor="amountDue" className="form-label">
-                  How much is due?
+                  <i className="bi bi-receipt-cutoff me-2" aria-hidden="true"></i>
+                  <span>How much is due?</span>
                 </label>
                 <input
                   id="amountDue"
@@ -119,7 +123,8 @@ function App() {
 
               <div className="mb-3">
                 <label htmlFor="amountReceived" className="form-label">
-                  How much was received?
+                  <i className="bi bi-cash-coin me-2" aria-hidden="true"></i>
+                  <span>How much was received?</span>
                 </label>
                 <input
                   id="amountReceived"
@@ -161,10 +166,16 @@ function App() {
           <div className="row row-cols-2 row-cols-md-4 g-3">
             {denominationCards.map((card) => (
               <div className="col" key={card.testId}>
-                <div className="card h-100">
+                <div className="card h-100 denom-card">
                   <div className="card-body text-center">
-                    <h2 className="h6 card-title">{card.label}</h2>
-                    <p className="display-6 mb-0" data-testid={card.testId}>
+                    <h2 className="h6 card-title d-flex align-items-center justify-content-center gap-2">
+                      <i className="bi bi-cash-stack" aria-hidden="true"></i>
+                      <span>{card.label}</span>
+                    </h2>
+                    <p
+                      className="display-6 mb-0 denom-value"
+                      data-testid={card.testId}
+                    >
                       {card.value}
                     </p>
                   </div>
